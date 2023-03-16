@@ -8,5 +8,14 @@
 </head>
 <body>
   this is the application updated
+  <br/>
+  <form>
+    <input
+      type="text"
+      [(ngModel)]="person.username"
+      name="username"
+    />
+  </form>
+  <p>{{ person.username }}</p>
 </body>
 </html>
