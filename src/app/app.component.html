@@ -7,15 +7,24 @@
   <title>{{ title }}</title>
 </head>
 <body>
-  this is the application updated
-  <br/>
-  <form>
-    <input
-      type="text"
-      [(ngModel)]="person.username"
-      name="username"
-    />
-  </form>
-  <p>{{ person.username }}</p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Angular application</h1>
+        <form>
+          <div class="form group">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="person.username"
+              name="username"
+            />
+          </div>
+        </form>
+        <p>{{ person.username }}</p>
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>
