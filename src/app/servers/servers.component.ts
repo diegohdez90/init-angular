@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer = false;
   inputAttribute: string = "";
+  serverStatus = "No server added";
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -15,7 +16,8 @@ export class ServersComponent {
   }
 
   addServer = () => {
-
+    console.log('in the event');
+    this.serverStatus = `Server added: ${this.inputAttribute}`;
   }
 
   ngOnInit() {
