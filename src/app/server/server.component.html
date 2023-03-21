@@ -1,1 +1,4 @@
-<p>{{ serverId }}: {{ getServerStatus() }}</p>
+<p class="alert" [ngClass]="{
+  'alert-success': serverStatus === 'online',
+  'alert-danger': serverStatus === 'offline'
+}">{{ serverId }}: {{ getServerStatus() }}</p>

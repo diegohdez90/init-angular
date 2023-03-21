@@ -9,6 +9,7 @@ export class ServersComponent {
   allowNewServer = false;
   inputAttribute: string = "";
   serverStatus = "No server added";
+  isServerCreated: boolean = false;
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -16,7 +17,7 @@ export class ServersComponent {
   }
 
   addServer = () => {
-    console.log('in the event');
+    this.isServerCreated = true;
     this.serverStatus = `Server added: ${this.inputAttribute}`;
   }
 
