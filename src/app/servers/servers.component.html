@@ -23,11 +23,7 @@
       <p *ngIf="isServerCreated" else noServer>{{ serverStatus }}</p>
     </div>
   </form>
-  <app-server></app-server>
-  <app-server></app-server>
-  <app-server></app-server>
-  <app-server></app-server>
-  <app-server></app-server>
+  <app-server *ngFor="let server of servers"></app-server>
 </div>
 
 <ng-template #noServer>

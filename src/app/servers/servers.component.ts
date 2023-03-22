@@ -10,6 +10,7 @@ export class ServersComponent {
   inputAttribute: string = "";
   serverStatus = "No server added";
   isServerCreated: boolean = false;
+  servers: Array<String> = [];
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -18,6 +19,7 @@ export class ServersComponent {
 
   addServer = () => {
     this.isServerCreated = true;
+    this.servers.push(this.inputAttribute);
     this.serverStatus = `Server added: ${this.inputAttribute}`;
   }
 
